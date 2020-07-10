@@ -1,6 +1,7 @@
 # VQGR
 VQGR, a visual question generation about radiology images, is based on the variational auto-encoders architecture and designed so that it can take a radiology image as input and generate a natural question as output.
 
+![VQGR model](https://github.com/sarrouti/VQGR/edit/master/vqgri.png)
 
 
 
