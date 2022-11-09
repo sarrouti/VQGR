@@ -1,7 +1,7 @@
-# VQGRaD
-Visual Question Generation (VQG) from images is a rising research topic in both fields of natural language processing and computer vision. Although there are some recent efforts towards generating questions from images in the open domain, the VQG task in the medical domain has not been well-studied so far due to the lack of labeled data. In this paper, we introduce a goal-driven VQG approach for radiology images called VQGRaD that generates questions targeting specific image aspects such as modality and abnormality. In particular, we study generating natural language questions based on the visual content of the image and on additional information such as the image caption and the question category. VQGRaD encodes the dense vectors of different inputs into two latent spaces, which allows generating, for a specific question category, relevant questions about the images, with or without their captions. We also explore the impact of domain knowledge incorporation (e.g., medical entities and semantic types) and data augmentation techniques on visual question generation in the medical domain. Experiments performed on the VQA-RAD dataset of clinical visual questions showed that VQGRaD achieves 61.86% BLEU score and outperforms strong baselines. We also performed a blinded human evaluation of the grammaticality, fluency, and relevance of the generated questions. The human evaluation demonstrated the better quality of VQGRaD outputs and showed that incorporating medical entities improves the quality of the generated questions. Using the test data and evaluation process of the ImageCLEF 2020 VQA-Med challenge, we found that relying on the proposed data augmentation technique to generate new training samples by applying different kinds of transformations, can mitigate the lack of data, avoid overfitting, and bring a substantial improvement in medical VQG.
+# VQGR
+VQGR, a visual question generation about radiology images, is based on the variational auto-encoders architecture and designed so that it can take a radiology image to generate a related question.
 
-![VQGRaD model](https://www.google.com/search?q=VQGRaD&rlz=1C1GCEA_enUS961US961&oq=VQGRaD&aqs=chrome..69i57.7839j0j1&sourceid=chrome&{google:instantExtendedEnabledParameter}ie=UTF-8#imgrc=1TkksPJic0txoM)
+![VQGR model](https://www.google.com/search?q=VQGRaD&rlz=1C1GCEA_enUS961US961&oq=VQGRaD&aqs=chrome..69i57.7839j0j1&sourceid=chrome&{google:instantExtendedEnabledParameter}ie=UTF-8#imgrc=1TkksPJic0txoM)
 
 ## Requirements
 gensim==3.0.0\
@@ -20,29 +20,34 @@ install Python requirements:
 pip install -r requirements.txt
 ```
 ## Downloads and Setup
-Once you clone this repo, run the vocab.py, store_dataset.py, train_vqgrad.py and evaluate_vqgrad.py file to process the dataset, to train and evaluate the model.
+Once you clone this repo, run the vocab.py, store_dataset.py, train.py and evaluate.py file to process the dataset, to train and evaluate the model.
 ```shell
 $ python vocab.py
 $ python store_dataset.py
-$ python train_vqgrad.py
-$ python evaluate_vqgrad.py
+$ python train.py
+$ python evaluate.py
 ```
 
 ## Citation
 If you are using this repository or a part of it, please cite our paper:
 
 ```
-@Article{info12080334,
-AUTHOR = {Sarrouti, Mourad and Ben Abacha, Asma and Demner-Fushman, Dina},
-TITLE = {Goal-Driven Visual Question Generation from Radiology Images},
-JOURNAL = {Information},
-VOLUME = {12},
-YEAR = {2021},
-NUMBER = {8},
-ARTICLE-NUMBER = {334},
-URL = {https://www.mdpi.com/2078-2489/12/8/334},
-ISSN = {2078-2489}
+@inproceedings{sarrouti-etal-2020-visual,
+    title = "Visual Question Generation from Radiology Images",
+    author = "Sarrouti, Mourad  and
+      Ben Abacha, Asma  and
+      Demner-Fushman, Dina",
+    booktitle = "Proceedings of the First Workshop on Advances in Language and Vision Research",
+    month = jul,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2020.alvr-1.3",
+    doi = "10.18653/v1/2020.alvr-1.3",
+    pages = "12--18",
+    abstract = "Visual Question Generation (VQG), the task of generating a question based on image contents, is an increasingly important area that combines natural language processing and computer vision. Although there are some recent works that have attempted to generate questions from images in the open domain, the task of VQG in the medical domain has not been explored so far. In this paper, we introduce an approach to generation of visual questions about radiology images called VQGR, i.e. an algorithm that is able to ask a question when shown an image. VQGR first generates new training data from the existing examples, based on contextual word embeddings and image augmentation techniques. It then uses the variational auto-encoders model to encode images into a latent space and decode natural language questions. Experimental automatic evaluations performed on the VQA-RAD dataset of clinical visual questions show that VQGR achieves good performances compared with the baseline system. The source code is available at https://github.com/sarrouti/vqgr.",
 }
+
 
 
 
