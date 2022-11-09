@@ -1,7 +1,7 @@
 # VQGR
 VQGR, a visual question generation about radiology images, is based on the variational auto-encoders architecture and designed so that it can take a radiology image to generate a related question.
 
-![VQGR model](https://www.google.com/search?q=VQGRaD&rlz=1C1GCEA_enUS961US961&oq=VQGRaD&aqs=chrome..69i57.7839j0j1&sourceid=chrome&{google:instantExtendedEnabledParameter}ie=UTF-8#imgrc=1TkksPJic0txoM)
+![VQGR model]([https://www.google.com/search?q=VQGRaD&rlz=1C1GCEA_enUS961US961&oq=VQGRaD&aqs=chrome..69i57.7839j0j1&sourceid=chrome&{google:instantExtendedEnabledParameter}ie=UTF-8#imgrc=1TkksPJic0txoM](https://github.com/sarrouti/VQGR/blob/master/vqgri.jpg))
 
 ## Requirements
 gensim==3.0.0\
